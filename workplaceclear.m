@@ -10,7 +10,7 @@ for i=1:NScholar
     auxl = work.School(work.PID==i);
     auxp = work.Prom(work.PID==i);
     for t=1:NYear
-        auxs= auxl(auxf<=t+1968 & auxt>=t+1968);
+        auxs= auxl(auxf<=t+FirstYear-1 & auxt>=t+FirstYear-1);
         if isempty(auxs)
             demo.Location{i,t} = 'Heaven';
         else
@@ -21,4 +21,4 @@ end
 
 %%
 
-clear aux central* GID i ia ic index j k l NPlace AuxYear PID PIDs places plat plc plon scholars StartYear urlname work worknw WorkPlaces nobal nobaltime worknnw
+clear aux* central* data GID t i ia ic index j k l NPlace AuxYear PID PIDs places plat plc plon scholars StartYear urlname work worknw WorkPlaces nobal nobaltime worknnw prom

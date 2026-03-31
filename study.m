@@ -38,7 +38,7 @@ demo.School = demo.School';
 %%
 [places,ia,ic] = unique(data.School);
 StartYear = min(data.From);
-AuxYear = 2025-StartYear+1;
+AuxYear = FinalYear-StartYear+1;
 centraltime = zeros(NScholar,AuxYear);
 nobaltime = zeros(NScholar,AuxYear);
 StudyPlaces = graph;
@@ -73,5 +73,29 @@ end
 demo.Study = centraltime(:,end-NYear+1:end)./max(centraltime(:,end-NYear+1:end));
 demo.NobelStudy = nobaltime(:,end-NYear+1:end)./max(nobaltime(:,end-NYear+1:end));
 demo.NobelStudy(isnan(demo.NobelStudy)) = 0;
+%%
+dist = distances(StudyPlaces);
+pos = find(strcmp('Robert E. Lucas',StudyPlaces.Nodes{:,1}));
+idx = isfinite(dist(pos,:));
+S1 = subgraph(StudyPlaces,idx);
+pos = find(strcmp('Robert Triffin',StudyPlaces.Nodes{:,1}));
+idx = isfinite(dist(pos,:));
+S2 = subgraph(StudyPlaces,idx);
+
+hfig = figure;
+plot(S1,'Layout','layered','NodeLabel',S1.Nodes.Name)
+set(gcf,'units','points','position',[0,0,960,720],'Color','w')
+set(gca,'Color','w')
+axis off
+%xticklabels({}); yticklabels({});xticks([]);yticks([]);
+
+hfig = figure;
+plot(S2,'Layout','layered','NodeLabel',S2.Nodes.Name)
+set(gcf,'units','points','position',[0,0,960,720],'Color','w')
+set(gca,'Color','w')
+axis off
+%xticklabels({}); yticklabels({});xticks([]);yticks([]);
+
+clear S1 S2 idx pos dist hfig
 
 clear aux* AuxYear central centraltime data GID i ia ic j k l N NPlace places plc pos StartYear urlname StudyPlaces nobal nobaltime

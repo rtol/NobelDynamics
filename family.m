@@ -10,7 +10,7 @@ nist = zeros(NScholar,NScholar,NYear);
 Family = graph;
 StartYear = min(data.Year);
 %%
-for t=1:2025-StartYear
+for t=1:FinalYear-StartYear
     fam = data.Name(data.Year==StartYear+t-1);
     fam1 = data.Name_1(data.Year==StartYear+t-1);
     if size(fam)>0
@@ -27,9 +27,9 @@ for t=1:2025-StartYear
                 if ~isempty(aux2)
                     dist(i,j,t)=length(shortestpath(Family,demo.Name{i},demo.Name{j}));
                     dist(j,i,t)=dist(i,j,t);
- %                   if demo.Nobel(i)+94<t+1969 & demo.Nobel(j)+94>=t+1969
+ %                   if demo.Nobel(i)+94<t+FirstYear & demo.Nobel(j)+94>=t+FirstYear
  %                       nist(i,j,t)=dist(i,j,t-94);
- %                   elseif demo.Nobel(j)+94<t+1969 & demo.Nobel(i)+94>=t+1969
+ %                   elseif demo.Nobel(j)+94<t+FirstYear & demo.Nobel(i)+94>=t+FirstYear
  %                       nist(j,i,t)=dist(j,i,t-94);
  %                   end
                 end
@@ -41,8 +41,8 @@ end
 %%
 nist = zeros(NScholar,NScholar,NYear);
 for t=1:NYear
-    aux1 = demo.Nobel<t+1969-1;
-    aux2 = demo.Nobel>=t+1969-1;
+    aux1 = demo.Nobel<t+FirstYear-1;
+    aux2 = demo.Nobel>=t+FirstYear-1;
     aux3 = aux1*aux2';
     nist(:,:,t) = aux3.*dist(:,:,t+93);
 end

@@ -4,7 +4,41 @@ CandidateGraph
 close all
 
 %%
-nyear = 2026-1969;
+dist = distances(C1);
+
+pos = find(strcmp('Jan Tinbergen (1969)',C1.Nodes{:,1}));
+pos = find(strcmp('Wassily Leontief (1973)',C1.Nodes{:,1}));
+pos = find(strcmp('Kenneth Arrow (1972)',C1.Nodes{:,1}));
+pos = find(strcmp('John Maynard Keynes',C1.Nodes{:,1}));
+idx = isfinite(dist(pos,:));
+S1 = subgraph(C1,idx);
+
+hfig = figure;
+box off
+plot(S1,'Layout',layout,'NodeLabel',S1.Nodes.Name)
+set(gcf,'units','points','position',[0,0,960,720],'Color','w')
+set(gca,'Color','w')
+axis off
+
+%aux = getframe(hfig);
+%img = aux.cdata;
+%imwrite(img,'Leontief.jpg');
+
+%%
+tsid = dist';
+pos = find(strcmp('Esther Duflo (2019)',C1.Nodes{:,1}));
+idx = isfinite(tsid(pos,:));
+S1 = subgraph(C1,idx);
+hfig = figure;
+box off
+plot(S1,'Layout',layout,'NodeLabel',S1.Nodes.Name)
+set(gcf,'units','points','position',[0,0,960,720],'Color','w')
+set(gca,'Color','w')
+axis off
+
+clear dist tsid hfig idx S1 pos
+%%
+nyear = FinalYear-FirstYear+1;
 nnode = size(C1.Nodes,1);
 
 nobool = zeros(nnode,nyear);
@@ -35,7 +69,7 @@ for i=1:nyear
 end
 
 
-%% 90 mins alternative: load econsiblings.mat
+%% 115 mins; alternative: load econsiblings.mat
 if full
     nn = size(C1.Nodes,1);
     in = indegree(C1);
@@ -58,7 +92,7 @@ if full
     end
     toc
 
-    save econsiblings.mat
+    save("econsiblings.mat","sibling")
 else
     load econsiblings.mat
 end

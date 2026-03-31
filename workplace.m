@@ -6,10 +6,11 @@ data = webread(urlname);
 [places,ia,ic] = unique(data.School);
 plat = data.Lat(ia);
 plon = data.Lon(ia);
+prom = data.prominence(ia);
 NPlace = length(places);
 
 StartYear = min(data.From);
-AuxYear = 2025-StartYear+1;
+AuxYear = FinalYear-StartYear+1;
 
 work.PID = data.PID;
 work.Name = data.Name;
@@ -20,7 +21,7 @@ work.Lat = data.Lat;
 work.Lon = data.Lon;
 work.Prom = data.prominence;
 
-clear ia ic data
+clear ia ic
 
 work.Nobel = zeros(length(work.PID),1);
 for i=1:length(work.PID)
@@ -51,7 +52,7 @@ for i=1:AuxYear
     
     if size(WorkPlaces.Nodes,1)>0
         central = centrality(WorkPlaces,'closeness');
-        nobal = nobelity(WorkPlaces,work.Nobel<i+1969-71);
+        nobal = nobelity(WorkPlaces,work.Nobel<i+FirstYear-71);
 
         for j=1:length(central)
             aux = strcmp(WorkPlaces.Nodes.Name,work.Name{j});
@@ -68,8 +69,8 @@ end
 PID = work.PID(ia);
 
 [PIDs, index] = sort(PID);
-worknw = centraltime(index,(end-56):end); %1969-2025
+worknw = centraltime(index,(end-NYear+1):end);
 worknw = worknw./max(worknw);
 
-worknnw = nobaltime(index,(end-56):end); %1969-2025
+worknnw = nobaltime(index,(end-NYear+1):end);
 worknnw = worknnw./max(worknnw);

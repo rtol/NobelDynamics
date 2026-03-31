@@ -53,3 +53,12 @@ for i = 1:nframes,
    writeVideo(v,E(i));
 end
 close(v)
+
+%%
+ hfig = figure;
+        p = plot(Family,'Layout',layout,'NodeLabel',Family.Nodes.Name,'EdgeColor','g');
+        highlight(p,'Edges',Family.Edges.Weight == 1,'EdgeColor','r')
+        highlight(p,'Edges',Family.Edges.Weight == 2,'EdgeColor','b')
+        title(strcat('Family network,',{' '},int2str(StartYear+t-1),', friend=green, spouse=red, child=blue'));
+        set(gcf,'units','points','position',[0,0,960,720])
+        xticklabels({}); yticklabels({});xticks([]);yticks([]);

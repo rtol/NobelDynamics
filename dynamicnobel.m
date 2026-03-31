@@ -1,7 +1,9 @@
 clear all
 
 full = false;
-
+FirstYear = 1969;
+FinalYear = 2025;
+%%
 demographics
 field
 family
@@ -21,7 +23,8 @@ committeeclear
 citations
 
 save dynnobel.mat
-
+%%
 genealogy
 
+%%
 tostata

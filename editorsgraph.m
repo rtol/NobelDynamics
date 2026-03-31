@@ -1,4 +1,27 @@
-layout = 'layered';
+dist = distances(Editors);
+pos = find(strcmp('Esther Duflo',Editors.Nodes{:,1}));
+idx = isfinite(dist(pos,:));
+S1 = subgraph(Editors,idx);
+%%
+for i=1:length(S1.Nodes.Name)
+    aux=data.Nobel(strcmp(S1.Nodes.Name{i},data.Name));
+    nobed(i)=aux(1);
+end
+label = S1.Nodes.Name;
+label(nobed==2100)={''};
+%%
+layout = 'force';
+hfig = figure;
+p = plot(S1,'Layout',layout,'NodeLabel',label,'EdgeColor','g');
+highlight(p,'Edges',S1.Edges.Weight == 1,'EdgeColor','r')
+highlight(p,'Edges',S1.Edges.Weight == 3,'EdgeColor','b')
+highlight(p,'Edges',S1.Edges.Weight == 4,'EdgeColor','c')
+highlight(p,'Edges',S1.Edges.Weight == 5,'EdgeColor','m')
+title('JPE = blue, Ectra = green, AER = red, REStud = cyan, QJE = magenta');
+set(gcf,'units','points','position',[0,0,1152,864])
+xticklabels({}); yticklabels({});xticks([]);yticks([]);
+
+%%        
 f = 0;
 for i=1:NYear,
     for l=1:NJ

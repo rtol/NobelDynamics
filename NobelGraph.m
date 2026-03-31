@@ -73,8 +73,8 @@ p2 = {'William Sumner' 'Noah Porter' 'Heinrich Ewald' 'Johann Eichhorn' 'Gottlie
 s3 = {'Granville Hall' 'Granville Hall'};
 p3 = {'Henry Bowditch' 'William James'};
 
-s4 = {'Maximilian Duncker' 'Felix Papencordt' 'Felix Papencordt' 'Felix Papencordt' 'August Wilhelm Schlegel' 'August Wilhelm Schlegel'};
-p4 = {'Felix Papencordt' 'Friedrich Schelling' 'Christian August Brandis' 'August Wilhelm Schlegel' 'Alexander Hamilton' 'Christian Heyne'};
+s4 = {'Maximilian Duncker' 'Felix Papencordt' 'Felix Papencordt' 'Felix Papencordt' 'August Wilhelm Schlegel'};
+p4 = {'Felix Papencordt' 'Friedrich Schelling' 'Christian August Brandis' 'August Wilhelm Schlegel' 'Christian Heyne'};
 
 s5 = {'Herbert Adams' 'Herbert Adams'};
 p5 = {'Karl Knies' 'Johann Bluntschli'};
