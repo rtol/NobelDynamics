@@ -2,13 +2,14 @@ clear all
 
 full = false;
 FirstYear = 1969;
-FinalYear = 2025;
-%%
+FinalYear = 2026;
+
 demographics
 field
 family
 %familygraphs
 familyclear
+%%
 workplace
 %workplacegraphs
 workplaceclear
@@ -17,6 +18,7 @@ coauthor
 %coauthorgraph
 coauthorclear
 editors
+%editorsgraph
 editorsclear
 committee
 committeeclear
@@ -26,5 +28,5 @@ save dynnobel.mat
 %%
 genealogy
 
-%%
+%% 
 tostata
