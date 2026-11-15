@@ -68,6 +68,7 @@ for t=1:NYear
     end
 end
 group.TotCite = group.TotCite./sum(group.NClass);
+group.NCSave = sum(group.NClass);
 group.NClass = group.NClass./sum(group.NClass);
 %%
 memdata.FieldCode = zeros(NMember,1);
@@ -138,6 +139,22 @@ stata.TotCite = reshape(demo.TotCite,NScholar*NYear,1);
 stata.H = reshape(demo.H,NScholar*NYear,1);
 stata.I1000 = reshape(demo.I1000,NScholar*NYear,1);
 stata.I100 = reshape(demo.I100,NScholar*NYear,1);
+stata.Top5 = reshape(demo.Top5,NScholar*NYear,1);
+stata.MaxCiteY = reshape(demo.MaxCiteY,NScholar*NYear,1);
+stata.TotCiteY = reshape(demo.TotCiteY,NScholar*NYear,1);
+stata.HY = reshape(demo.HY,NScholar*NYear,1);
+stata.I1000Y = reshape(demo.I1000Y,NScholar*NYear,1);
+stata.I100Y = reshape(demo.I100Y,NScholar*NYear,1);
+stata.MaxCiteFY = reshape(demo.MaxCiteFY,NScholar*NYear,1);
+stata.TotCiteFY = reshape(demo.TotCiteFY,NScholar*NYear,1);
+stata.HFY = reshape(demo.HFY,NScholar*NYear,1);
+stata.I1000FY = reshape(demo.I1000FY,NScholar*NYear,1);
+stata.I100FY = reshape(demo.I100FY,NScholar*NYear,1);
+stata.MaxCiteZ = reshape(demo.MaxCiteZ,NScholar*NYear,1);
+stata.TotCiteZ = reshape(demo.TotCiteZ,NScholar*NYear,1);
+stata.HZ = reshape(demo.HZ,NScholar*NYear,1);
+stata.I1000Z = reshape(demo.I1000Z,NScholar*NYear,1);
+stata.I100Z = reshape(demo.I100Z,NScholar*NYear,1);
 stata.Siblings = reshape(demo.Siblings,NScholar*NYear,1);
 stata.AncA = reshape(demo.AncA,NScholar*NYear,1);
 stata.AncH = reshape(demo.AncH,NScholar*NYear,1);

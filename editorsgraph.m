@@ -18,8 +18,9 @@ highlight(p,'Edges',S1.Edges.Weight == 3,'EdgeColor','b')
 highlight(p,'Edges',S1.Edges.Weight == 4,'EdgeColor','c')
 highlight(p,'Edges',S1.Edges.Weight == 5,'EdgeColor','m')
 title('JPE = blue, Ectra = green, AER = red, REStud = cyan, QJE = magenta');
-set(gcf,'units','points','position',[0,0,1152,864])
-xticklabels({}); yticklabels({});xticks([]);yticks([]);
+set(gcf,'units','points','position',[0,0,1152,864],'Color','w')
+set(gca,'Color','w')
+axis off
 
 %%        
 f = 0;

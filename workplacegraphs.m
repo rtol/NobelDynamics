@@ -1,8 +1,6 @@
 StartYear = min(data.From);
 data.Nobel = data.Nobel./data.Nobel;
 data.Nobel(isnan(data.Nobel))=0;
-data.BatesClark = data.BatesClark./data.BatesClark;
-data.BatesClark(isnan(data.BatesClark))=0;
 latNobel = zeros(2026-StartYear,1);
 lonNobel = zeros(2026-StartYear,1);
 latBC = zeros(2026-StartYear,1);
@@ -20,10 +18,6 @@ for i=1:2026-StartYear
     xNN = 0;
     xNB = 0;
     for j=1:NPlace
-        %xlatN = data.Lat(data.From <= StartYear+i-1 & data.To >= StartYear+i-1 & strcmp(data.School,places{j}) & data.Nobel == 1 & data.BatesClark == 1);
-        %xlonN = data.Lon(data.From <= StartYear+i-1 & data.To >= StartYear+i-1 & strcmp(data.School,places{j}) & data.Nobel == 1 & data.BatesClark == 1);
-        %xlatB = data.Lat(data.From <= StartYear+i-1 & data.To >= StartYear+i-1 & strcmp(data.School,places{j}) & data.Nobel == 0 & data.BatesClark == 1);
-        %xlonB = data.Lon(data.From <= StartYear+i-1 & data.To >= StartYear+i-1 & strcmp(data.School,places{j}) & data.Nobel == 0 & data.BatesClark == 1);
         xlatN = data.Lat(data.From <= StartYear+i-1 & data.To >= StartYear+i-1 & strcmp(data.School,places{j}) & data.Nobel == 1);
         xlonN = data.Lon(data.From <= StartYear+i-1 & data.To >= StartYear+i-1 & strcmp(data.School,places{j}) & data.Nobel == 1);
         xlatB = data.Lat(data.From <= StartYear+i-1 & data.To >= StartYear+i-1 & strcmp(data.School,places{j}) & data.Nobel == 0);
@@ -66,13 +60,13 @@ figure %47:end for Bates Clark
 plot(year(21:end),difflat(21:end),'-+b',year(21:end),difflat(21:end)+2*difflatse(21:end),'--b',year(21:end),difflat(21:end)-2*difflatse(21:end),'--b',year(21:end),zeros(length(year(21:end)),1),'k')
 %title('Bates Clark, Nobel vs not')
 ylabel('difference in latitude')
-xlim([1920 2025])
+xlim([1920 2026])
 
 figure
 plot(year(21:end),difflon(21:end),'-+b',year(21:end),difflon(21:end)+2*difflonse(21:end),'--b',year(21:end),difflon(21:end)-2*difflonse(21:end),'--b',year(21:end),zeros(length(year(21:end)),1),'k')
 %title('Bates Clark, Nobel vs not')
 ylabel('difference in longitude')
-xlim([1920 2025])
+xlim([1920 2026])
 
 %% 
 StartYear = min(data.From);
@@ -136,7 +130,7 @@ text(lonBC,latBC,yrstr)
 worldmap('World')
 plotm(coastlat,coastlon)
 set(gcf,'units','points','position',[0,0,960,720])
-scatterm(plat,plon,prom,'MarkerEdgeColor',[235/255 97/255 35/255])
+scatterm(plat,plon,2*prom,'MarkerEdgeColor',[235/255 97/255 35/255])
 
 %%
 clear coast* diff* dist* lat* lon* prom scale year*
