@@ -2,70 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Nobel Academic Families</title>
-<meta name="claude:viewport-fit-sides" content="cover">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<style>
-/* Layout: title + controls strip, then the figure as a pannable card; tooltip follows the pointer.
-   Deliberately single (light) theme: it reproduces a printed figure. */
-:root{
-  --bg:#eef0f3; --paper:#ffffff; --ink:#1d2433; --muted:#5d6676; --rule:#d5dae2;
-  --winner:#e8821e; --winner-edge:#a85a0f; --other:#3f78c4; --other-edge:#27558f;
-  --link:#9aa2ae; --cross:#4b525c; --hl:#c2352b;
-  --f-ui:"IBM Plex Sans","Segoe UI",Helvetica,Arial,sans-serif;
-  --f-mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
-  color-scheme:light;
-}
-html,body{margin:0;background:var(--bg);color:var(--ink)}
-body{font-family:var(--f-ui);font-size:15px;line-height:1.45;
-  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:18px 28px}
-.wrap{max-width:1400px;margin:0 auto;display:grid;gap:12px}
-h1{font-size:clamp(22px,3vw,30px);line-height:1.15;margin:0;font-weight:700;text-wrap:balance}
-.sub{color:var(--muted);font-size:14px;max-width:95ch}
-.key{display:flex;flex-wrap:wrap;gap:4px 18px;font-size:13px;color:var(--muted);align-items:center}
-.dot{display:inline-block;width:10px;height:10px;border-radius:50%;vertical-align:-1px;margin-right:6px}
-.ln{display:inline-block;width:22px;height:0;border-top:2px solid;vertical-align:3px;margin-right:6px}
-.bar{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center}
-input[type=search]{font:inherit;font-size:14px;padding:7px 10px;border:1px solid var(--rule);border-radius:6px;background:var(--paper);color:var(--ink);width:min(320px,100%)}
-button{font:inherit;font-size:14px;padding:6px 11px;border:1px solid var(--rule);border-radius:6px;background:var(--paper);color:var(--ink);cursor:pointer}
-button:hover{border-color:var(--muted)}
-:focus-visible{outline:2px solid var(--other);outline-offset:2px}
-.hint{font-size:13px;color:var(--muted)}
-.card{position:relative;background:var(--paper);border:1px solid var(--rule);border-radius:8px;overflow:hidden;
-  height:min(78vh,900px);min-height:420px;touch-action:none;cursor:grab}
-.card.drag{cursor:grabbing}
-svg{display:block;width:100%;height:100%}
-.fam rect{stroke:#c9ced6;stroke-width:1}
-.fam .t{font:600 21px var(--f-ui);fill:var(--ink)}
-.fam .c{font:400 16px var(--f-ui);fill:var(--muted)}
-.e{fill:none;stroke:var(--link);stroke-width:.8}
-.x{fill:none;stroke:var(--cross);stroke-width:1.5;opacity:.85}
-.n{stroke-width:.8;cursor:pointer}
-.n.w{fill:var(--winner);stroke:var(--winner-edge)}
-.n.o{fill:var(--other);stroke:var(--other-edge)}
-svg.focus .e,svg.focus .x{opacity:.12}
-svg.focus .n{opacity:.25}
-svg.focus .on{opacity:1}
-svg.focus .e.on,svg.focus .x.on{stroke:var(--hl);stroke-width:2.2}
-svg.focus .n.sel{stroke:var(--ink);stroke-width:2.5}
-.zoom{position:absolute;right:10px;top:10px;display:flex;flex-direction:column;gap:4px}
-.zoom button{width:34px;padding:3px 0;font-size:17px;line-height:1.3}
-#tip{position:fixed;z-index:20;pointer-events:none;background:var(--paper);border:1px solid var(--rule);border-radius:6px;
-  box-shadow:0 4px 16px rgba(29,36,51,.14);padding:9px 11px;font-size:13px;max-width:300px;min-width:0}
-#tip b{font-size:14px}
-#tip .k{color:var(--muted);font-size:12px;margin-top:5px}
-#tip .y{font-family:var(--f-mono);color:var(--winner-edge)}
-footer{font-size:12.5px;color:var(--muted)}
-@media (prefers-reduced-motion:no-preference){.n,.e,.x{transition:opacity .15s}}
-</style>
 </head>
 <body>
 <h1>Academic Genealogy of Laureates of the Nobel Memorial Prize in the Economic Sciences</h1>
 <br>
 The 101 Nobelists are all academically related, some closely, some more distantly. An academic relationship is that between a PhD advisor and candidate. We <a href="https://rtol.github.io/NobelDynamics/nobel_circle.html">here</a> group them in 14 families and show the relationships within and between those families. 
 <p>
-The <a href="https://ideas.repec.org/p/arx/papers/2603.20767.html">accompanying paper</a> is about much more that academic genealogy. It includes friends and family, co-students, co-authors, co-workers, co-editors, publications, citations, specialization, age, nationality, ethnicity, alma mater, faith, and attractiveness. The paper finds that the Nobel Memorial Prize rotates semi-regularly between fields of economics. The path to ultimate success is clear: Write a few highly-cited papers. Find an older co-author who will go on to win the Nobel Prize. Have a student win before you.
+The <a href="https://ideas.repec.org/p/arx/papers/2603.20767.html">accompanying paper</a> is about much more than academic genealogy. It includes friends and family, co-students, co-authors, co-workers, co-editors, publications, citations, specialization, age, nationality, ethnicity, alma mater, faith, and attractiveness. The paper finds that the Nobel Memorial Prize rotates semi-regularly between fields of economics. The path to ultimate success is clear: Write a few highly-cited papers. Find an older co-author who will go on to win the Nobel Prize. Have a student win before you.
 <p>
 There is <a href="https://github.com/rtol/NobelDynamics">code</a> to replicate the paper.
 <p>
