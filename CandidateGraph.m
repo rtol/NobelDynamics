@@ -10,8 +10,8 @@ p1 = {'Yves Balasko' 'Jerry Green' 'Jean-Pierre Aubin' 'Lionel McKenzie'};
 s3 = {'Jean-Pierre Aubin' 'Jean-Pierre Aubin' 'Jacques-Louis Lions' 'Laurent Schwartz' 'Georges Valiron' 'Emile Borel' 'Gaston Darboux' 'Gaston Darboux'};
 p3 = {'Jacques-Louis Lions' 'Jean-Pierre Kahane' 'Laurent Schwartz' 'Georges Valiron' 'Emile Borel' 'Gaston Darboux' 'Michel Chasles' 'Joseph Bertrand'};
 
-s4 = {'Jean-Pierre Kahane' 'Szolem Mandelbrojt' 'Szolem Mandelbrojt' 'Szolem Mandelbrojt' 'Emile Picard' 'Jules Tannery' 'Charles Hermite' 'Eugene-Charles Catalan' 'Joseph Louiville'};
-p4 = {'Szolem Mandelbrojt' 'Jacques Hadamard' 'Jules Tannery' 'Emile Picard' 'Gaston Darboux' 'Charles Hermite' 'Eugene-Charles Catalan' 'Joseph Louiville' 'Simeon-Denis Poisson'};
+s4 = {'Jean-Pierre Kahane' 'Szolem Mandelbrojt' 'Szolem Mandelbrojt' 'Szolem Mandelbrojt' 'Emile Picard' 'Jules Tannery' 'Charles Hermite' 'Eugene-Charles Catalan' 'Joseph Liouville'};
+p4 = {'Szolem Mandelbrojt' 'Jacques Hadamard' 'Jules Tannery' 'Emile Picard' 'Gaston Darboux' 'Charles Hermite' 'Eugene-Charles Catalan' 'Joseph Liouville' 'Simeon-Denis Poisson'};
 
 s = [s1 s3 s4];
 p = [p1 p3 p4];
@@ -68,7 +68,7 @@ p = [p0 p1];
 
 C1 = addedge(C1,p,s);
 
-s = {'Olivier Blanchard' 'Olivier Blanchard' 'Jordi Gali' 'Nobuhiro Kiyotaki' 'Robert Hall'};
+s = {'Olivier Blanchard' 'Olivier Blanchard' 'Jordi Gali' 'Nobuhiro Kiyotaki' 'Robert Hall (2026)'};
 p = {'Stanley Fischer' 'Robert Solow (1987)' 'Olivier Blanchard' 'Olivier Blanchard' 'Robert Solow (1987)'};
 
 C1 = addedge(C1,p,s);
@@ -421,7 +421,7 @@ s5 = {'Herbert Gintis'};
 p5 = {'Arthur Smithies'};
 
 s = [s0 s1 s2 s3 s4 s5];
-p = [p0 s1 p2 p3 p4 p5];
+p = [p0 p1 p2 p3 p4 p5];
 
 C1 = addedge(C1,p,s);
 
@@ -492,8 +492,8 @@ p7 = {'Irving Fisher' 'William Sumner' 'Willard Gibbs' 'Hubert Newton'};
 s8 = {'Silvana Tenreyro' 'Silvana Tenreyro' 'Silvana Tenreyro' 'Partha Dasgupta'};
 p8 = {'Alberto Alesina' 'Kenneth Rogoff' 'Robert Barro' 'James Mirrlees (1996)'};
 
-s9 = {'Gregory Mankiw' 'Imran Rasul' 'Timothy Besley'};
-p9 = {'Ricardo Reis' 'Timothy Besley' 'W.M. Gorman'};
+s9 = {'Ricardo Reis' 'Imran Rasul' 'Timothy Besley'};
+p9 = {'Gregory Mankiw' 'Timothy Besley' 'W.M. Gorman'};
 
 s10 = {'Joe Bain' 'Joe Bain' 'Joe Bain'};
 p10 = {'Edward Chamberlin' 'Joseph Schumpeter' 'Edward Mason'};
@@ -640,7 +640,7 @@ p = {'Dilip Mookherjee' 'Darryl Duffie' 'Partha Dasgupta' 'David Luenberger' 'Wi
 
 C1 = addedge(C1,p,s);
 
-s = {'Michael Woodford' 'Michael Woodford' 'Timothy Kehoe' 'Timothy Kehoe'};
+s = {'Michael Woodford (2026)' 'Michael Woodford (2026)' 'Timothy Kehoe' 'Timothy Kehoe'};
 p = {'Robert Solow (1987)' 'Timothy Kehoe' 'Andreu Mas-Colell' 'Herbert Scarf'};
 
 C1 = addedge(C1,p,s);
@@ -665,7 +665,7 @@ p = {'Bernhard Riemann' 'Carl Gauss'};
 
 C1 = addedge(C1,p,s);
 
-s = {'Tarlok Singh' 'Harold Laski' 'Harold Laski' 'Harold Laski' 'Francois Perrous' 'Erik Lundberg'};
+s = {'Tarlok Singh' 'Harold Laski' 'Harold Laski' 'Harold Laski' 'Francois Perroux' 'Erik Lundberg'};
 p = {'Harold Laski' 'Karl Pearson' 'Ernest Baker' 'H.A.L. Fisher' 'Rene Gonnard' 'Karl Gustav Cassel'};
 
 C1 = addedge(C1,p,s);
@@ -676,7 +676,7 @@ p = {'Jerry Hausman' 'Danny Quah' 'Olivier Blanchard' 'Stanley Fischer' 'Thomas 
 C1 = addedge(C1,p,s);
 
 s = {'Barry J. Eichengreen' 'Barry J. Eichengreen' 'Donald E. Moggridge' 'Donald E. Moggridge' 'Dani Rodrik' 'David Romer'};
-p = {'Donald E. Moggridge' 'Wiliam  Parker' 'Joan Robinson' 'Richard Kahn' 'Avinash Dixit' 'Stanley Fischer'};
+p = {'Donald E. Moggridge' 'William Parker' 'Joan Robinson' 'Richard Kahn' 'Avinash Dixit' 'Stanley Fischer'};
 
 C1 = addedge(C1,p,s);
 
@@ -711,7 +711,73 @@ p = {'Walt Rostow' 'Arthur Gayer' 'Arthur Gayer'};
 C1 = addedge(C1,p,s);
 
 s = {'Asli Demirguc-Kunt' 'Edward Kane' 'Serena Ng' 'Serena Ng' 'Valerie Ramey' 'Valerie Ramey' 'Valerie Ramey'  'Steven Durlauf'};
-p = {'Edward Kane' 'Evsey Domar' 'Angus Deaton (2015)' 'Pierre Perron' 'Robert Hall' 'John Taylor' 'Steven Durlauf' 'Peter Phillips'};
+p = {'Edward Kane' 'Evsey Domar' 'Angus Deaton (2015)' 'Pierre Perron' 'Robert Hall (2026)' 'John Taylor' 'Steven Durlauf' 'Peter Phillips'};
+
+C1 = addedge(C1,p,s);
+
+s = {'Jeffrey G. Williamson' 'Moses Abramovitz' 'Duncan Black' 'Phyllis Deane' 'Phyllis Deane' 'Alec Cairncross' 'Dennis Robertson' 'Phyllis Deane'  'Austin Robinson'  'Austin Robinson'  'Austin Robinson'};
+p = {'Moses Abramovitz' 'Wesley Clair Mitchell' 'William R. Scott' 'William R. Scott' 'Alec Cairncross' 'Dennis Robertson' 'Alfred Marshall' 'Austin Robinson' 'C.R. Fay' 'Dennis Robertson' 'Gerald Shove'};
+
+C1 = addedge(C1,p,s);
+
+s = {'Richard Edwards' 'Nancy Folbre' 'Nancy Folbre' 'Nancy Folbre' 'Jane Humphries' 'Jane Humphries' 'Jane Humphries' 'Jane Humphries' 'Henry Wan'};
+p = {'Samuel Bowles' 'Samuel Bowles' 'Richard Edwards' 'Jane Humphries' 'Henry Wan' 'Satish Singh' 'George Staller' 'Amartya Sen (1998)' 'Paul Samuelson (1970)'};
+
+C1 = addedge(C1,p,s);
+
+s = {'W.E. Johnson' 'Alfred Marshall' 'Henry Sidgwick' 'John Grote' 'John Philips Higman' 'Charles Babbage' 'Robert Woodhouse' 'Samuel Vince' 'Anthony Shepherd' 'Robert Smith' 'Roger Cotes'};
+p = {'Henry Sidgwick' 'Henry Sidgwick' 'John Grote' 'John Philips Higman' 'Charles Babbage' 'Robert Woodhouse' 'Samuel Vince' 'Anthony Shepherd' 'Robert Smith' 'Roger Cotes' 'Isaac Newton'};
+
+C1 = addedge(C1,p,s);
+
+s = {'Steven Davis'};
+p = {'Herschel Grossman'};
+
+C1 = addedge(C1,p,s);
+
+s = {'Hal Varian' 'Hal Varian' 'David Gale'};
+p = {'Daniel McFadden (2000)' 'David Gale' 'Albert Tucker'};
+
+C1 = addedge(C1,p,s);
+
+s = {'Ludwig Straub' 'Stefanie Stantcheva' 'Stefanie Stantcheva' 'Ivan Werning' 'Fernando Alvarez'};
+p = {'Ivan Werning' 'Ivan Werning' 'James Poterba' 'Fernando Alvarez' 'Edward Prescott (2004)'};
+
+C1 = addedge(C1,p,s);
+
+%% connect Pissarides
+s0 = {'Stuart Chapin' 'William Sewell' 'Duane Alwin' 'Jon Krasnick'};
+p0 = {'Franklin Giddings' 'Stuart Chapin' 'William Sewell' 'Duane Alwin'};
+
+s1 = {'Duane Alwin' 'Robert Hauser' 'Edward Laumann'};
+p1 = {'Robert Hauser' 'Edward Laumann' 'Talcott Parsons'};
+
+s2 = {'Howard Odum' 'Howard Odum'};
+p2 = {'Franklin Giddings' 'Granville Hall'};
+
+s = [s0 s1 s2];
+p = [p0 p1 p2];
+
+C1 = addedge(C1,p,s);
+
+%% connect Haavelmo
+s0 = {'Leif Johansen' 'Leif Johansen' 'Tore Thonstad' 'Tore Thonstad'};
+p0 = {'Trygve Haavelmo (1989)' 'Ragnar Frisch (1969)' 'Trygve Haavelmo (1989)' 'Ragnar Frisch (1969)'};
+
+s1 = {'Lennert Hjalmarsson'};
+p1 = {'Leif Johansen'};
+
+s2 = {'Steinar Strom' 'Magne Mogstad' 'John Humphries' 'John Humphries' 'John Humphries' 'Erik Hurst' 'Frank Stafford'};
+p2 = {'Tore Thonstad' 'Steinar Strom' 'Magne Mogstad' 'James Heckman (2000)' 'Erik Hurst' 'Frank Stafford' 'Arnold Zellner'};
+
+s = [s0 s1 s2];
+p = [p0 p1 p2];
+
+C1 = addedge(C1,p,s);
+
+%% add depth to Allais
+p = {'Francois Divisia' 'Clement Colson'};
+s = {'Maurice Allais (1988)' 'Francois Divisia'};
 
 C1 = addedge(C1,p,s);
 %%

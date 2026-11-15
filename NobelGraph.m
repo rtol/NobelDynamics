@@ -824,8 +824,8 @@ set(gcf,'units','points','position',[0,0,960,720])
 xticklabels({}); yticklabels({});xticks([]);yticks([]);
 F(39) = getframe(hfig);
 %%
-s = {'Paul Krugman (2008)' 'Rudiger Dornbusch'};
-p = {'Rudiger Dornbusch' 'Robert Mundell (1999)'};
+s = {'Paul Krugman (2008)' 'Paul Krugman (2008)' 'Rudiger Dornbusch' 'William Nordhaus (2018)'};
+p = {'William Nordhaus (2018)' 'Rudiger Dornbusch' 'Robert Mundell (1999)' 'Robert Solow (1987)'};
 
 G40 = addedge(G39,p,s);
 GED(40) = length(s);
@@ -1007,8 +1007,8 @@ xticklabels({}); yticklabels({});xticks([]);yticks([]);
 F(49) = getframe(hfig);
 
 %%
-s = {'William Nordhaus (2018)' 'Paul Romer (2018)' 'Paul Romer (2018)' 'Jose Scheinkman' 'Lionel McKenzie' 'Lionel McKenzie' 'William Baumol' 'Oskar Morgenstern'  'Oskar Morgenstern' 'Hans Mayer' 'Gary Becker (1992)'};
-p = {'Robert Solow (1987)' 'Robert Lucas (1995)' 'Jose Scheinkman' 'Lionel McKenzie' 'William Baumol' 'Oskar Morgenstern' 'Lionel Robbins' 'Ludwig von Mises' 'Hans Mayer' 'Friedrich von Wieser'  'William Baumol'};
+s = {'Paul Romer (2018)' 'Paul Romer (2018)' 'Jose Scheinkman' 'Lionel McKenzie' 'Lionel McKenzie' 'William Baumol' 'Oskar Morgenstern'  'Oskar Morgenstern' 'Hans Mayer' 'Gary Becker (1992)'};
+p = {'Robert Lucas (1995)' 'Jose Scheinkman' 'Lionel McKenzie' 'William Baumol' 'Oskar Morgenstern' 'Lionel Robbins' 'Ludwig von Mises' 'Hans Mayer' 'Friedrich von Wieser'  'William Baumol'};
 
 G50 = addedge(G49,p,s);
 GED(50) = length(s);
