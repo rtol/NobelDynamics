@@ -6,24 +6,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Nobel Academic Families</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
-/* Layout: title + controls strip, then the figure as a pannable card; tooltip follows the pointer.
+/* Page style (font, white background, margins) matches the lineage pages (make_lineages_html.py).
+   Layout: title + controls strip, then the figure as a pannable card; tooltip follows the pointer.
    Deliberately single (light) theme: it reproduces a printed figure. */
 :root{
-  --bg:#eef0f3; --paper:#ffffff; --ink:#1d2433; --muted:#5d6676; --rule:#d5dae2;
+  --bg:#ffffff; --paper:#ffffff; --ink:#1d2433; --muted:#5d6676; --rule:#d5dae2;
   --winner:#e8821e; --winner-edge:#a85a0f; --other:#3f78c4; --other-edge:#27558f;
   --link:#9aa2ae; --cross:#4b525c; --hl:#c2352b;
-  --f-ui:"IBM Plex Sans","Segoe UI",Helvetica,Arial,sans-serif;
-  --f-mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+  --f-ui:Arial,Helvetica,sans-serif;
+  --f-mono:ui-monospace,Consolas,monospace;
   color-scheme:light;
 }
-html,body{margin:0;background:var(--bg);color:var(--ink)}
-body{font-family:var(--f-ui);font-size:15px;line-height:1.45;
-  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:18px 28px}
-.wrap{max-width:1400px;margin:0 auto;display:grid;gap:12px}
-h1{font-size:clamp(22px,3vw,30px);line-height:1.15;margin:0;font-weight:700;text-wrap:balance}
-.sub{color:var(--muted);font-size:14px;max-width:95ch}
+html{background:var(--bg)}
+body{margin:2em auto;max-width:1400px;padding:0 1em;background:var(--bg);color:#222}
+body{font-family:var(--f-ui);font-size:16px;line-height:1.45}
+.wrap{display:grid;gap:12px}
+h1{font-size:1.6em;line-height:1.2;margin:0;font-weight:700}
+.sub{color:#222;font-size:1em}
 .key{display:flex;flex-wrap:wrap;gap:4px 18px;font-size:13px;color:var(--muted);align-items:center}
 .dot{display:inline-block;width:10px;height:10px;border-radius:50%;vertical-align:-1px;margin-right:6px}
 .ln{display:inline-block;width:22px;height:0;border-top:2px solid;vertical-align:3px;margin-right:6px}
@@ -59,10 +59,14 @@ svg.focus .n.sel{stroke:var(--ink);stroke-width:2.5}
 #tip .y{font-family:var(--f-mono);color:var(--winner-edge)}
 footer{font-size:12.5px;color:var(--muted)}
 @media (prefers-reduced-motion:no-preference){.n,.e,.x{transition:opacity .15s}}
+/* site navigation header (same on index.html and the lineage pages) */
+.sitenav{font-size:14px;margin:0 0 .8em 0}.sitenav a{margin-right:1.4em;color:#2f6db3;text-decoration:none}.sitenav a:hover{text-decoration:underline}.sitenav a[aria-current]{color:inherit;font-weight:700}
+.wrap>.sitenav{margin:0 0 5px}   /* same nav-to-title spacing as the other pages */
 </style>
 </head>
 <body>
 <div class="wrap">
+  <nav class="sitenav"><a href="index.html">Home</a><a href="nobel_circle.html" aria-current="page">14 families</a><a href="nobel_lineages8.html">8 lineages</a><a href="nobel_lineages5.html">5 lineages</a></nav>
   <h1>Academic families of the economics Nobel laureates, 1969–2026</h1>
   <div class="sub" id="sub"></div>
   <div class="key">
